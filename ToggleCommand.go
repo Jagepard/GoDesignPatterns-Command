@@ -3,7 +3,7 @@ package main
 // ToggleCommand is ...
 type ToggleCommand struct{}
 
-var i = 1
+var i int = 1
 
 func (command ToggleCommand) exec() {
 	if i == 1 {
