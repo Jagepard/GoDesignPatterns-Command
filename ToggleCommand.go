@@ -3,15 +3,15 @@ package main
 // ToggleCommand is ...
 type ToggleCommand struct{}
 
-func (command ToggleCommand) exec() {
-	toggle := 0
+var i = 1
 
-	if toggle == 1 {
-		toggle--
+func (command ToggleCommand) exec() {
+	if i == 1 {
+		i--
 		subCommand := TurnOnCommand{}
 		subCommand.exec()
 	} else {
-		toggle++
+		i++
 		subCommand := TurnOffCommand{}
 		subCommand.exec()
 	}
