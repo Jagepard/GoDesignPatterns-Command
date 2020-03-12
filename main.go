@@ -1,3 +1,8 @@
+/**
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
+ */
+
 package main
 
 func main() {
@@ -9,7 +14,6 @@ func main() {
 
 	execute(device, "on")
 	execute(device, "off")
-
 	execute(device, "toggle")
 	execute(device, "toggle")
 }
