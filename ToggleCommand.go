@@ -1,18 +1,23 @@
+/**
+ * @author  : Jagepard <jagepard@yandex.ru>
+ * @license https://mit-license.org/ MIT
+ */
+
 package main
 
 // ToggleCommand is ...
 type ToggleCommand struct{}
 
-func (command ToggleCommand) exec() {
-	toggle := 0
+var toggle int = 0
 
+func (command ToggleCommand) exec() {
 	if toggle == 1 {
-		toggle--
-		subCommand := TurnOnCommand{}
-		subCommand.exec()
-	} else {
-		toggle++
 		subCommand := TurnOffCommand{}
 		subCommand.exec()
+		toggle--
+	} else {
+		subCommand := TurnOnCommand{}
+		subCommand.exec()
+		toggle++
 	}
 }
